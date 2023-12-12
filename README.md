@@ -1,10 +1,10 @@
 # PromptGarage
 
 ## What Is It?
-PromptGarage is a cutting-edge platform designed for users who interact with AI models like ChatGPT. It offers a suite of tools to enhance, diagnose, and customize ChatGPT prompts. Users can "Tune-Up" their prompts to improve quality, "Diagnose" them to understand the effectiveness of each component, and "Customize" by receiving alternative, optimized suggestions. Additionally, PromptGarage provides a personal storage space for saving and managing prompts, eliminating the hassle of losing or misplacing them.
+PromptGarage is a unique tool designed for users who frequently engage with ChatGPT. This application provides a simple platform to enhance, diagnose, and customize prompts for a more efficient and effective AI interaction experience. Users can 'Tune-Up' prompts for improved clarity, precision and intent; 'Diagnose' them to understand the underlying structure and effectiveness; or 'Customize' them with alternative suggestions. Additionally, PromptGarage offers a personal storage space for saving and managing prompts, creating a seamless workflow for frequent AI interactions.
 
 ## Why Build It?
-PromptGarage was created to address the challenge of crafting effective prompts for AI interactions. Whether for creativity, problem-solving, or specific queries, constructing the right prompt is crucial for getting the desired response from AI models. PromptGarage aims to streamline this process, providing users with tools to refine and perfect their prompts, thus enhancing the overall AI interaction experience.
+PromptGarage was created to address the challenges users face when crafting prompts for AI models. In the era of AI-powered solutions, the effectiveness of an interaction often hinges on the quality of the prompt, and even leveraging some prompt engineering strategies. Well, PromptGarage seeks to streamline this aspect, ensuring any user can maximize the potential of their AI interactions. It also provides a structured and organized way to manage prompts, which is often a scattered and inefficient process.
 
 ## Table of Contents
 1. [Features](#features)
@@ -17,59 +17,65 @@ PromptGarage was created to address the challenge of crafting effective prompts 
 8. [Contact](#contact)
 
 ## Features
-- "Tune-Up" feature to enhance and return better prompts
-- "Diagnose" function to break down prompts and assign a value score to each part
-- "Customize" option providing alternative and improved prompt suggestions
-- Personal storage for saving and managing prompts
-- A separate platform for easy navigation and retrieval of saved prompts
+- 'Tune-Up' feature to enhance the quality of prompts
+- 'Diagnose' tool to analyze and score the components of a prompt
+- 'Customize' option offering alternative suggestions for building prompts
+- Personal storage for saving and organizing prompts
 
 ## Technologies Used
-PromptGarage is built with a focus on web technologies including: **Vue.js** and **Vuetify**.
+PromptGarage leverages a modern tech stack including: **Vue.js**, **Vuetify**, and **Vuex**.
 
-Additional tools and libraries include: **marked**, **vue-router**, **vuex**, **autoprefixer**, **postcss**, and **tailwindcss**.
+Additional tools and libraries: **marked** for markdown rendering, **tailwindcss** for style management, and **postcss** for advanced styling features.
 
 ## Getting Started
-To start using PromptGarage:
+To use PromptGarage:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/promptgarage.git
+git clone https://github.com/[username]/promptgarage.git
 cd promptgarage
 
 # Install dependencies
 npm install
 
-# Start the local server
+# Start the application
 npm run dev
 ```
 
 ## Usage
 ### Tune-Up
-Enhance your existing prompts to achieve a higher level of clarity and effectiveness.
+The 'Tune-Up' feature allows users to refine their prompts for better clarity and specificity. By analyzing the structure and wording, it suggests modifications to enhance the prompt's effectiveness, ensuring more accurate and relevant responses from AI models. This feature is particularly useful for users seeking to optimize their interactions with AI, be it for research, creative writing, or technical queries.
 
 ### Diagnose
-Understand the strengths and weaknesses of your prompts with a detailed breakdown and scoring.
+The 'Diagnose' tool offers a detailed breakdown of a prompt, assessing each component's effectiveness and relevance. It assigns a value score to individual elements, helping users understand the strengths and weaknesses of their prompt. This insight is invaluable for users looking to master the art of prompt crafting, enabling them to learn and improve with each interaction.
 
 ### Customize
-Receive alternative, optimized prompt suggestions tailored to your specific requirements.
+'Customize' provides users with alternative suggestions to improve specific parts of their prompts. It offers up to five different examples for each component, fostering creativity and expanding the user's approach to prompt writing. This feature is designed to inspire users to explore various angles and styles, enhancing the diversity and richness of their interactions with AI models.
 
 ## Screenshots
-[Include screenshots of various features and interfaces of PromptGarage]
+## Screenshots
+![Home](./src/assets/screenshots/home.png)
+![Tune-Up](./src/assets/screenshots/tune-up.png)
+![Diagnose](./src/assets/screenshots/diagnose.png)
+![Customize](./src/assets/screenshots/customize.png)
+![Customize 2](./src/assets/screenshots/customize-2.png)
+![Prompts](./src/assets/screenshots/prompts.png)
 
 ## Challenges and Learnings
-Developing PromptGarage involved challenges in creating algorithms for prompt analysis and optimization. A significant learning experience was in understanding the nuances of natural language processing and its application in prompt improvement.
+The main challenge in developing PromptGarage was first understanding the deciding factors that make most prompts effective. This required extensive research into prompt engineering strategies and the underlying structure of AI models. It also meant creating an intuitive and effective scoring system for the 'Diagnose' feature, which required a strong understanding of how AI models interpret prompts, which as come through experience. Another challenge was designing the interface to be extremely user-friendly interface so as to maximize the potential user base without getting lost in any technical preparation beforehand.
+
+On the software engineering side of things, this was an experience for me to practice leveraging Vuetify, Vue Router and Vuex with Vue.js, mostly for state management and real-time updates, which were a significant part of the development process.
 
 ## Future Enhancements
-- Advanced AI integration for more sophisticated prompt optimization.
-- Expansion of customization options with greater variety.
-- User community features for sharing and discussing prompts.
-- Mobile app development for iOS and Android.
-- Implementing user feedback mechanisms for continuous improvement.
+- Implementing machine learning algorithms for more advanced prompt analysis.
+- Introducing collaborative features for shared prompt management.
+- Developing a mobile app version for on-the-go prompt management.
+- Expanding the customization options with more varied suggestions.
+- Enhancing user interface for a more engaging experience.
 
 ## Contact
-For inquiries or collaborations, feel free to reach out:
+For more information, suggestions, or collaborations:
 
-- [Your Portfolio](https://www.yourportfolio.com/)
-- [LinkedIn](https://www.linkedin.com/in/yourlinkedinprofile/)
-- [Email](youremail@example.com)
-```
+- [Portfolio](https://www.dioveloper.com/)
+- [LinkedIn](https://www.linkedin.com/in/dionis-gonzalez/)
+- [Email](dionisggr@gmail.com)
