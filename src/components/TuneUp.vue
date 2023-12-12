@@ -91,28 +91,17 @@ export default {
     },
   },
   mounted() {
-    Object.assign(this.enhancement, data.tuneup)
+    this.enhancedPrompt = {
+      paragraph: data.tuneup.paragraph,
+      structured: data.tuneup.structured
+    };
   },
   data() {
     return {
       title: '',
       selectedOption: 'paragraph',
       isLoading: false,
-      enhancedPrompt: {
-        paragraph:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-        structured: {
-          strategy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          role: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-          context: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-          task: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-          instructions: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-          goal: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          audience: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-          format: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-          examples: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-        },
-      },
+      enhancedPrompt: null,
       showTitleModal: false,
     };
   },
