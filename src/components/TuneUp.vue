@@ -8,10 +8,10 @@
     <v-row class="mt-4 mb-8 justify-center">
       <v-col class="text-center mb-4" cols="12" md="6">
         <v-btn-toggle v-model="selectedOption" mandatory>
-          <v-btn value="paragraph" color="custom-dark-blue" depressed
+          <v-btn value="paragraph" color="custom-dark-blue" depressed :style="isMobile && 'font-size: 0.85rem;'"
             >Paragraph</v-btn
           >
-          <v-btn value="structured" color="custom-dark-blue" depressed
+          <v-btn value="structured" color="custom-dark-blue" depressed :style="isMobile && 'font-size: 0.85rem;'"
             >Structured</v-btn
           >
         </v-btn-toggle>
@@ -90,6 +90,9 @@ export default {
       type: Object,
     },
   },
+  mounted() {
+    Object.assign(this.enhancement, data.tuneup)
+  },
   data() {
     return {
       title: '',
@@ -110,7 +113,6 @@ export default {
           examples: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
         },
       },
-      notification: 'Test',
       showTitleModal: false,
     };
   },

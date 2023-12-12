@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid :style="{ 'margin-top': isMobile ? '48px' : '7vw' }">
+  <v-container fluid :style="{ 'margin-top': isMobile ? '4rem' : '7vw' }">
     <!-- Notification -->
     <Notification />
 
@@ -9,7 +9,7 @@
         <!-- Welcome Message -->
         <v-row class="my-2 md:my-4">
           <v-col class="text-center" cols="12">
-            <h1 class="text-center font-semibold text-lg mb-2 md:mb-4 mx-auto">
+            <h1 class="text-center font-semibold text-lg mb-2 md:mb-4 mx-auto" :style="isMobile && 'font-size: 1.5rem;'">
               Welcome to PromptGarage
             </h1>
 
@@ -21,12 +21,12 @@
           v-if="isMobile"
           v-model="selectedMode"
           mandatory
-          style="margin-top: 20px"
+          style="margin-top: 20px;"
           class="full-width-toggle mb-2"
         >
-          <v-btn class="rounded" value="Diagnose" depressed>Diagnose</v-btn>
-          <v-btn class="rounded" value="Tune-Up" depressed>Tune-Up</v-btn>
-          <v-btn class="rounded" value="Customize" depressed>Customize</v-btn>
+          <v-btn class="rounded" :style="isMobile && 'font-size: 0.75rem;'" value="Diagnose" depressed>Diagnose</v-btn>
+          <v-btn class="rounded" :style="isMobile && 'font-size: 0.75rem;'" value="Tune-Up" depressed>Tune-Up</v-btn>
+          <v-btn class="rounded" :style="isMobile && 'font-size: 0.75rem;'" value="Customize" depressed>Customize</v-btn>
         </v-btn-toggle>
 
         <v-row
@@ -285,6 +285,9 @@ export default {
     },
   },
   computed: {
+    isMobile() {
+      return window.innerWidth <= 768;
+    },
     action() {
       return this.enhancement || this.diagnosis ? 'Reset' : 'Clear';
     },
@@ -348,6 +351,7 @@ export default {
   width: 33.33%;
   justify-content: center; 
 }
+
 
 @media (max-width: 768px) {
   h1 {

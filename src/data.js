@@ -11,6 +11,21 @@ const prompts = [
   { id: 10, title: "Chemist", content: "Act as a chemist and explain the following concepts.", user_id: 'demo' },
 ]
 
+const tuneup = {
+  paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+  structured: {
+    strategy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    role: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    context: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    task: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    instructions: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+    goal: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    audience: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    format: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    examples: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+  },
+}
+
 const diagnosis = {
   strategy: {
     value: 'instruction prompting, general knowledge, chain of thought',
@@ -369,4 +384,4 @@ const diagnosis = {
   },
 };
 
-export default { diagnosis, prompts };
+export default { diagnosis, tuneup, prompts };

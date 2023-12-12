@@ -20,7 +20,7 @@
         Score: {{ getAverageScore().toFixed(2) }}%
       </div>
 
-      <v-row class="mx-4" ref="diagnosisSection">
+      <v-row :class="!isMobile && 'mx-4'" ref="diagnosisSection">
         <v-col
           v-for="(group, label) in categorizedDiagnosis"
           :key="label"

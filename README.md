@@ -1,70 +1,75 @@
-# PromptWiz
+# PromptGarage
 
-## Overview
+## What Is It?
+PromptGarage is a cutting-edge platform designed for users who interact with AI models like ChatGPT. It offers a suite of tools to enhance, diagnose, and customize ChatGPT prompts. Users can "Tune-Up" their prompts to improve quality, "Diagnose" them to understand the effectiveness of each component, and "Customize" by receiving alternative, optimized suggestions. Additionally, PromptGarage provides a personal storage space for saving and managing prompts, eliminating the hassle of losing or misplacing them.
 
-PromptWiz is a robust application that enhances the user's prompts to guide ChatGPT for providing more accurate and contextually apt responses. The application is built on Vue 3, taking advantage of modern JavaScript features and design patterns.
-
-PromptWiz's key features are built using various popular libraries such as axios, lodash, vue-router, vuex and more. It leverages Vite as the build tool, which is faster and leaner than traditional web tooling.
-
-## Key Features
-- **Vue 3** - a progressive JavaScript framework for building user interfaces.
-- **Vite** - an opinionated web dev build tool that serves your code via native ES Module imports during development and bundles it with Rollup for production.
-- **axios** - Promise-based HTTP client for the browser and Node.js.
-- **lodash** - A modern JavaScript utility library delivering modularity, performance, and extras.
-- **vue-router** - The official router for Vue.js.
-- **vuex** - State management pattern + library for Vue.js applications.
-- **js-sha256** - A simple SHA-256 hash function for JavaScript supports UTF-8 encoding.
-- **vue-google-signin-button-directive** - A simple Vue.js directive for Google Sign-In Button.
-- **vue3-google-login** - A Google oAUth Sign-in / Log-in Component for Vue 3.
-- **vue-clipboard2** - A simple vue2 binding to clipboard.js.
-- **clipboard-copy** - Tiny, promise-based, 500 bytes, universal copy-to-clipboard for the web.
-- **Tailwind CSS** - A utility-first CSS framework for rapidly building custom user interfaces.
+## Why Build It?
+PromptGarage was created to address the challenge of crafting effective prompts for AI interactions. Whether for creativity, problem-solving, or specific queries, constructing the right prompt is crucial for getting the desired response from AI models. PromptGarage aims to streamline this process, providing users with tools to refine and perfect their prompts, thus enhancing the overall AI interaction experience.
 
 ## Table of Contents
+1. [Features](#features)
+2. [Technologies Used](#technologies-used)
+3. [Getting Started](#getting-started)
+4. [Usage](#usage)
+5. [Screenshots](#screenshots)
+6. [Challenges and Learnings](#challenges-and-learnings)
+7. [Future Enhancements](#future-enhancements)
+8. [Contact](#contact)
 
-- [Getting Started](#getting-started)
-- [Building the App](#building-the-app)
-- [Running the App](#running-the-app)
-- [Contributing](#contributing)
-- [License](#license)
+## Features
+- "Tune-Up" feature to enhance and return better prompts
+- "Diagnose" function to break down prompts and assign a value score to each part
+- "Customize" option providing alternative and improved prompt suggestions
+- Personal storage for saving and managing prompts
+- A separate platform for easy navigation and retrieval of saved prompts
+
+## Technologies Used
+PromptGarage is built with a focus on web technologies including: **Vue.js** and **Vuetify**.
+
+Additional tools and libraries include: **marked**, **vue-router**, **vuex**, **autoprefixer**, **postcss**, and **tailwindcss**.
 
 ## Getting Started
+To start using PromptGarage:
 
-1. Clone the project:
-    ```
-    git clone https://github.com/yourusername/promptwiz.git
-
-    cd promptwiz
-    ```
-
-2. Install the dependencies:
-    ```
-    npm ci
-    ```
-
-## Building the App
-To build the app, run the following command:
 ```bash
-npm run build
+# Clone the repository
+git clone https://github.com/yourusername/promptgarage.git
+cd promptgarage
+
+# Install dependencies
+npm install
+
+# Start the local server
+npm run dev
 ```
 
-This will produce a `dist/` folder which contains the built app.
+## Usage
+### Tune-Up
+Enhance your existing prompts to achieve a higher level of clarity and effectiveness.
 
-## Running the App
-1. To run the app in development mode, use the command:
-    ```
-    npm run dev
-    ```
+### Diagnose
+Understand the strengths and weaknesses of your prompts with a detailed breakdown and scoring.
 
-2. To preview the built app, use the command:
-    ```
-    npm run preview
-    ```
+### Customize
+Receive alternative, optimized prompt suggestions tailored to your specific requirements.
 
-## Contributing
+## Screenshots
+[Include screenshots of various features and interfaces of PromptGarage]
 
-All kinds of contributions (enhancements, new features, documentation & code improvements, issues & bugs reporting) are welcome. Please open an issue before submitting a pull request.
+## Challenges and Learnings
+Developing PromptGarage involved challenges in creating algorithms for prompt analysis and optimization. A significant learning experience was in understanding the nuances of natural language processing and its application in prompt improvement.
 
-## License
+## Future Enhancements
+- Advanced AI integration for more sophisticated prompt optimization.
+- Expansion of customization options with greater variety.
+- User community features for sharing and discussing prompts.
+- Mobile app development for iOS and Android.
+- Implementing user feedback mechanisms for continuous improvement.
 
-[MIT](https://opensource.org/licenses/MIT)
+## Contact
+For inquiries or collaborations, feel free to reach out:
+
+- [Your Portfolio](https://www.yourportfolio.com/)
+- [LinkedIn](https://www.linkedin.com/in/yourlinkedinprofile/)
+- [Email](youremail@example.com)
+```

@@ -82,25 +82,24 @@
     </div>
   </v-toolbar>
 
-  <!-- Mobile Slide-in Menu -->
-  <v-navigation-drawer
-    v-model="drawer"
-    app
-    temporary
-    location="right"
-    class="text-center text-lg slow-transition mobile-nav-drawer"
-  >
-    <!-- Close Button -->
-    <div class="close-menu" @click="drawer = false">&#10005;</div>
+<v-navigation-drawer
+  v-model="drawer"
+  app
+  temporary
+  location="right"
+  class="text-center text-lg slow-transition mobile-nav-drawer"
+>
+  <!-- Website Title -->
+  <h2 class="menu-title">PromptGarage</h2>
 
-    <v-list>
-      <v-list-item @click="drawer = false">
-        <v-icon left>mdi-login</v-icon>
-        <v-list-item-title>Login</v-list-item-title>
-      </v-list-item>
-      <v-list-item @click="drawer = false">
-        <v-icon left>mdi-account-plus</v-icon>
-        <v-list-item-title>Register</v-list-item-title>
+  <!-- Close Button -->
+  <div class="close-menu" @click="drawer = false">&#10005;</div>
+
+
+    <v-list class="mt-4">
+      <v-list-item class="mt-2" @click="goToGithub">
+        <v-icon left>mdi-github</v-icon>
+        <v-list-item-title>GitHub</v-list-item-title>
       </v-list-item>
       <v-list-item
         v-if="$store.state.isLoggedIn"
@@ -109,6 +108,19 @@
         <v-icon left>mdi-note-text</v-icon>
         <v-list-item-title>Prompts</v-list-item-title>
       </v-list-item>
+      <v-list-item v-if="$store.state.isLoggedIn" class="mt-2" @click="logout">
+        <v-icon left>mdi-login</v-icon>
+        <v-list-item-title>Logout</v-list-item-title>
+      </v-list-item>
+      <v-list-item v-if="!$store.state.isLoggedIn" class="mt-2" @click="setupDemo()">
+        <v-icon left>mdi-login</v-icon>
+        <v-list-item-title>Demo</v-list-item-title>
+      </v-list-item>
+      <v-list-item v-if="!$store.state.isLoggedIn" class="mt-2" @click="login">
+        <v-icon left>mdi-login</v-icon>
+        <v-list-item-title>Login</v-list-item-title>
+      </v-list-item>
+
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -134,22 +146,31 @@ export default {
       window.Clerk.user = {
         id: 'demo',
       };
+      this.drawer = false;
 
       this.$store.dispatch('login');
       this.$store.dispatch('alert', 'Logged in as demo user');
     },
     login() {
+      this.drawer = false;
+
       window.Clerk.openSignIn();
     },
     logout() {
-      window.Clerk?.signOut();
+      this.drawer = false;
 
+      window.Clerk?.signOut();
       this.$store.dispatch('logout');
       this.$store.dispatch('alert', 'Logged out successfully');
     },
     checkMobile() {
       this.isMobile = window.innerWidth <= 768;
     },
+    goToGithub() {
+      this.drawer = false;
+
+      window.open('https://github.com/dionisggr/promptgarage', '_blank');
+    }
   },
 };
 </script>
@@ -211,5 +232,13 @@ export default {
 
 .hamburger-button {
   margin: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.menu-title {
+  position: absolute;
+  top: 0.9rem;
+  left: 1rem;
+  font-size: 1.1rem;
 }
 </style>

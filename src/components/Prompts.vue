@@ -6,7 +6,7 @@
   <v-container class="prompts-container">
     <v-row>
       <!-- Prompt list -->
-      <v-col :cols="isMobile ? '12' : '4'" class="prompt-list my-4">
+      <v-col :cols="isMobile ? '12' : '4'" class="prompt-list m-4">
         <v-list>
           <v-list-item-group
             v-if="prompts.length"
@@ -121,7 +121,7 @@ export default {
   data() {
     return {
       prompts: [],
-      selectedPromptIndex: null,
+      selectedPromptIndex: 0,
       mobileModal: false,
       windowWidth: 0,
       isEditing: false,
@@ -219,6 +219,7 @@ v-btn[absolute][top][left] {
 .prompts-container {
   margin-top: 1rem;
   position: relative;
+  width: 95%;
   max-width: 1200px;
   padding-top: 2rem;
   border-radius: 2rem;

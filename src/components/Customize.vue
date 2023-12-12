@@ -151,13 +151,15 @@ export default {
             newOptions[key].value = newOptions[key].value.split(' -- ')[1];
             this.diagnosis[key].score = newOptions[key].score;
 
-            this.$emit('update-prompt', {
-              [key]: {
-                value: newOptions[key].value,
-                score: newOptions[key].score,
-              },
-              key,
-            })
+            if (key !== 'strategy') {
+              this.$emit('update-prompt', {
+                [key]: {
+                  value: newOptions[key].value,
+                  score: newOptions[key].score,
+                },
+                key,
+              })
+            }
           }
         }
       },
